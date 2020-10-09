@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+
+    <title>Adam Brooks Minisite: Tacocat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="Content/prism.css" rel="stylesheet" />
+    <link href="Content/myStyles.css" rel="stylesheet" />
+
+</head>
+
+<body class="content-bg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green static-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Run.html">Run</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/atbrooks84/atb-tacocat" target="_blank">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://adam-brooks-portfolio-2020.netlify.app/" target="_blank">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5 text-color-primary">Sum Of All Fears</h1>
+                <p class="text-color-secondary">Goal: An app to check if two given numbers add up to a target number</p>
+                <div class="row">
+                    <div class="col-8 offset-2">
+                        <pre><code class="language-js">
+    document.getElementById("soafBtn").addEventListener('click', function () {
+
+    let soafArray = [];
+    let k = parseInt(document.getElementById("kvalue").value);
+
+    soafArray.push(parseInt(document.getElementById("soafNum1").value), parseInt(document.getElementById("soafNum2").value), parseInt(document.getElementById("soafNum3").value), parseInt(document.getElementById("soafNum4").value), parseInt(document.getElementById("soafNum5").value), parseInt(document.getElementById("soafNum6").value));
+
+    for (index = 0, found = false; index < soafArray.length - 1; index++) {
+    let position = soafArray.indexOf(k - soafArray[index], index + 1);
+    if (position > 0) {
+    found = true;
+    if (found = true) {
+
+    document.getElementById("soafOut").innerHTML = (`<b>${k}</b> was found by adding ${soafArray[index]} and ${soafArray[position]}`);
+    break;
+
+    }
+    } else {
+
+    document.getElementById("soafOut").innerHTML = (`<b>${k}</b> was not found`);
+    }
+
+
+
+    }
+
+
+    })
+</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>What this code is achieving is first creating an empty array and then populating it using the six numbers supplied by the user. The seventh value, the "k" value, is stored in a variable outside of the array. Using a for loop to increment over the array, when then use a new variable "position" to check if the current selected element of the array can be equal to the "k" value if added to any other element. We do this by indexing over each element a second time within that comparison. The if/else statement then has to conditions. If "position" plus "index" equals "k", then the loop breaks and the two successful values are displayed on the document. Otherwise, a simple failure message is displayed.</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/prism.js"></script>
+
+    
+</body>
+
+</html>

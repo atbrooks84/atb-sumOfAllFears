@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atb-sumOfAllFears", "atb-sumOfAllFears.csproj", "{1F957837-E5C6-4904-8C0F-4B5071B2D6C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F957837-E5C6-4904-8C0F-4B5071B2D6C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F957837-E5C6-4904-8C0F-4B5071B2D6C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F957837-E5C6-4904-8C0F-4B5071B2D6C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F957837-E5C6-4904-8C0F-4B5071B2D6C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F30CA93C-A98F-40CA-A2BD-D2033E1F5D05}
+	EndGlobalSection
+EndGlobal

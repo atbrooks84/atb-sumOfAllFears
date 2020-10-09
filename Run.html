@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/Images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon-16x16.png">
+    <link rel="manifest" href="Images/site.webmanifest">
+
+    <title>Adam Brooks Minisite: Tacocat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="Content/myStyles.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body class="content-bg">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green static-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/index.html">
+                            About
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Run.html">Run</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/atbrooks84/atb-sumOfAllFears" target="_blank">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://adam-brooks-portfolio-2020.netlify.app/" target="_blank">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container card-placement">
+        <div class="card">
+            <div class="card-body">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        <div class="col-sm-12">
+                            <h4>Enter six numbers to check:</h4>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row text-center">
+
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum1" value="5" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum2" value="4" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum3" value="3" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum4" value="2" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum5" value="5" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                        <div class="col-sm-2">
+                            <input type="number" id="soafNum6" value="30" class="soaf-input nav-justified text-center form-control" />
+
+                        </div>
+                    </div>
+                    <br />                   
+                    <div class="row text-center">
+                        <div class="col-sm-12">
+                            <h4>Enter a number to look for:</h4>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row text-center">
+                        <div class="col-sm-4 offset-4 text-center">
+                            <input type="number" id="kvalue" value="6" class="soaf-k nav-justified text-center form-control" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-4 offset-4 text-center">
+                            <button type="submit" class="btn btn-outline-success text-center" id="soafBtn">Scary</button>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col text-center">
+                            <p id="soafOut" class="text-center"></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+        
+ 
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById("soafBtn").addEventListener('click', function () {
+
+            let soafArray = [];
+            let k = parseInt(document.getElementById("kvalue").value);
+
+            soafArray.push(parseInt(document.getElementById("soafNum1").value), parseInt(document.getElementById("soafNum2").value), parseInt(document.getElementById("soafNum3").value), parseInt(document.getElementById("soafNum4").value), parseInt(document.getElementById("soafNum5").value), parseInt(document.getElementById("soafNum6").value));
+
+            for (index = 0, found = false; index < soafArray.length - 1; index++) {
+                let position = soafArray.indexOf(k - soafArray[index], index + 1);
+                if (position > 0) {
+                    found = true;
+                    if (found = true) {
+
+                        document.getElementById("soafOut").innerHTML = (`<b>${k}</b> was found by adding ${soafArray[index]} and ${soafArray[position]}`);
+                        break;
+
+                    }
+                } else {
+
+                    document.getElementById("soafOut").innerHTML = (`<b>${k}</b> was not found`);
+                }
+
+
+
+            }
+
+
+        })
+    </script>
+
+    
+
+</body>
+
+</html>

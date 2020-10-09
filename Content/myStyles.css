@@ -1,0 +1,46 @@
+﻿.bg-green {
+    background-color: #3FA355 !important;
+}
+
+.text-color-primary {
+    color: #529C62;
+}
+
+.text-color-secondary {
+    color: #35F05D;
+}
+
+.a {
+    color: #F0354B;
+}
+
+.content-bg {
+    background-color: #fbe9eb;
+}
+
+.soaf-input{
+    background-color: black;
+    color: antiquewhite;
+    
+}
+
+.soaf-k{
+    background-color: darkorange;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.card-placement{
+    justify-content: space-around;
+    position: relative;
+    top: 100px;
+}
